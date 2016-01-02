@@ -1,0 +1,18 @@
+{
+  "name": "colorful-cursor",
+  "main": "./lib/colorful-cursor",
+  "version": "0.1.0",
+  "description": "Changing cursor color when you pressed key",
+  "keywords": [
+    "cursor",
+    "colorful",
+    "theme"
+  ],
+  "repository": "https://github.com/tanukiti1987/colorful-cursor",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
