@@ -1,7 +1,7 @@
 {
   "name": "colorful-cursor",
   "main": "./lib/colorful-cursor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Changing cursor color when you pressed key",
   "keywords": [
     "cursor",
