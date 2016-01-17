@@ -3,6 +3,7 @@ class ColorfulCursor
   COLOR_LEVEL_MULTIPLE = 3
   HEX                  = 16
   INDEX_OFFSET         = 1
+  BRIGHTNESS_LOW_LIMIT = 0x505050
 
   activate: (state) ->
     atom.config.colorfulCursor = {}
@@ -27,6 +28,9 @@ class ColorfulCursor
         startOffset = newColor.length - COLOR_CODE_LENGTH - INDEX_OFFSET
         endOffset = startOffset + COLOR_CODE_LENGTH
         newColor = newColor.substring(startOffset, endOffset)
+        # Setting for minimum brightness
+        newColor = parseInt(parseInt("0x#{newColor}") | BRIGHTNESS_LOW_LIMIT)
+          .toString(HEX)
         atom.config.colorfulCursor.color = newColor
 
 module.exports = new ColorfulCursor()
